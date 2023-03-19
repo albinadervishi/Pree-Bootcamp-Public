@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form action="/process" method="post">
+      <div>
+        <label>First N:*</label>
+        <input type="text" name="first_name" required />
+      </div>
+      <div>
+        <label>Last Name:*</label>
+        <input type="text" name="last" required />
+      </div>
+      <div>
+        <label>Email Adress:*</label>
+        <input type="text" name="email" required />
+      </div>
+      <div>
+        <label>Password:*</label>
+        <input type="password" name="password" required />
+      </div>
+      <div>
+        <label>Confirm Password:*</label>
+        <input type="password" name="password" required />
+      </div>
+      <div>
+        <label>Birthday</label>
+        <input type="date" name="Birthday" />
+      </div>
+      <div>
+        <p>Gender Identity</p>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male" id="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="female" id="female" />
+        <label for="nonbinary">Non-binary</label>
+        <input type="radio" name="gender" value="nonbinary" id="nonbinary" />
+        <label for="noanswer">I prefer not to answer</label>
+        <input type="radio" name="gender" value="noanswer" id="noanswer" />
+      </div>
+      <div>
+        <p>A short description about myself:</p>
+        <textarea name="comment" cols="20" rows="3"></textarea>
+      </div>
+      <div>
+        <label for="language">Favourite Language</label>
+        <select name="language">
+          <option>Java</option>
+          <option>C++</option>
+          <option>Javascript</option>
+          <option>Python</option>
+        </select>
+      </div>
+      <div>
+        <input type="checkbox" name="offers" id="offers" checked />
+        <label for="offers"
+          >Yes, I would like to recieve periodic email updates</label
+        >
+      </div>
+      <input type="submit" value="Create Account" />
+      <p>*Indicates a required field</p>
+    </form>
+  </body>
+</html>
