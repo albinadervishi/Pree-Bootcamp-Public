@@ -8,20 +8,19 @@
 }
 
 .nav {
+    height: 50px;
     padding: 10px;
     margin: auto;
     color: wheat;
     background-color: #333333;
     display: flex;
     justify-content: space-between;
-    
 }
 
-.nav-links {
-    /* width: 400px; */
+.nav-links, .nav-title {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    align-items: center;
     list-style-type: none;
 }
 
