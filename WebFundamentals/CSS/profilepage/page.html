@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>Profile Page</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul class="nav-links">
+            <h1 class="navtitle">Profile</h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+        </ul>
+        <button class="btn">Sign Out</button>
+    </div>
+
+    <div class="main">
+
+        <div class="row">
+
+            <div class="user-card">
+                <p id="cover"></p>
+                <div class="details">
+                    <img class="profilepicture" src="images/jane-m.jpg" alt="profilepicture">
+                    <h1 class="name margin-updown">Jane Doe</h1>
+                    <div class="logonamecontainer d-flex align-center margin-updown">
+                        <img class="logo" src="images/map-marker.png" alt="locationmarker">
+                        <h3>Seattle</h3>
+                    </div>
+                    <p class="description margin-updown"><span>Developer | Engineer | Problem Solver</span>Master of
+                        shadows and the Internet</p>
+                    <div class="logonamecontainer margin-updown">
+                        <img class="logo" src="images/gear.png" alt="settingslogo">
+                        <a href="#">edit profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requests">
+                <div class="navrequests d-flex align-center p-1">
+                    <h2 class="number1 d-flex align-center">2</h2>
+                    <h2 class="title">Connections request</h2>
+                </div>
+
+                <div class="mainrequests p-1">
+
+                    <div class="request d-flex justify-content margin-bottom">
+                        <div class="person d-flex align-center">
+                            <img class="photo" src="images/todd-s.jpg" alt="todd">
+                            <p>Todd E</p>
+                        </div>
+                        <div class="accdecc">
+                            <img class="icon" src="images/accept-circle.png" alt="accept">
+                            <img class="icon" src="images/close-circle.png" alt="ignore">
+                        </div>
+                    </div>
+
+                    <div class="request d-flex justify-content margin-bottom">
+                        <div class="person d-flex align-center">
+                            <img class="photo" src="images/phil-s.jpg" alt="phil">
+                            <p>Phil K</p>
+                        </div>
+                        <div class="accdecc">
+                            <img class="icon" src="images/accept-circle.png" alt="accept">
+                            <img class="icon" src="images/close-circle.png" alt="ignore">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="education">
+                <h3 class="education-title d-flex align-center margin-bottom">Education</h3>
+                <div class="maineducation">
+                    <h3>Coding Dojo - Full Stack Bootcamp</h3>
+                    <p>Dec 2019-March 2020</p>
+                    <p>Triple black belt in Python, MERN, C#</p>
+                </div>
+            </div>
+
+
+            <div class="friends">
+
+                <div class="navrequests d-flex align-center p-1">
+                    <h3 class="number2 d-flex align-center">500+</h3>
+                    <h2 class="title">Your Connections</h2>
+                </div>
+
+                <div class="friendsname margin-bottom">
+                    <div class="person d-flex align-center">
+                        <img class="photo" src="images/adrien-s.jpg" alt="adrien">
+                        <p>Adrien D</p>
+                    </div>
+                    <div class="person d-flex align-center">
+                        <img class="photo" src="images/anne-s.jpg" alt="anne">
+                        <p>Anne J</p>
+                    </div>
+                    <div class="person d-flex align-center">
+                        <img class="photo" src="images/alayne-s.jpg" alt="alyne">
+                        <p>Alyane T</p>
+                    </div>
+                    <div class="person d-flex align-center">
+                        <img class="photo" src="images/arry-s.jpg" alt="arry">
+                        <p>Arry Y</p>
+                    </div>
+
+                </div>
+
+                <div class="viewmore">
+                    <a href="#">View more</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
