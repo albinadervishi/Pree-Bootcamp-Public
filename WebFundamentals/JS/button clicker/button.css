@@ -83,10 +83,10 @@ main{
 }
 
 
-.ninja_box span{
+.ninja_box div > h3, span{
     font-style: italic;
 }
 
-span{
+.column2 span{
     font-weight: bold ;
 }
