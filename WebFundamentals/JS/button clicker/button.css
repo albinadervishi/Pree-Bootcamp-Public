@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 75%;
+    padding-left: 13%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(222, 244, 244);
+    align-items: center;
+}
+
+nav button{
+    width: 13%;
+    height: 60%;
+    background-color: rgb(117, 184, 243);
+    box-shadow: 3px 3px;
+
+}
+
+nav input{
+    width: 30%;
+    height: 60%;
+}
+
+nav h1{
+    height: 30px;
+}
+
+
+main{
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 10%;
+}
+
+.column1{
+    flex: 3;
+    margin-right: 5%;
+}
+
+.column2 {
+    flex: 1;
+    margin-left: 5%;
+    border: 2px black solid;
+    height: fit-content;
+    padding: 3%;
+}
+
+.column2 button{
+    background-color: rgb(97, 201, 97);
+    box-shadow: 3px 3px;
+    width: 90%;
+    height: 40px;
+}
+
+.ninja_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    padding: 3%;
+    border: 2px black solid;
+}
+
+
+.ninja_box div{
+    flex-direction: column;
+    margin-right: 7%;
+}
+
+.ninja_box button {
+    background-color: rgb(242, 242, 90);
+    box-shadow: 3px 3px;
+    width: 90%;
+    height: 25px;
+}
+
+
+.ninja_box span{
+    font-style: italic;
+}
+
+span{
+    font-weight: bold ;
+}
