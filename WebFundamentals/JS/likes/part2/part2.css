@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 60%;
+    margin-left: 15%;
+}
+
+nav{
+    background-color: black;
+    color:white ;
+    padding: 7px;
+}
+
+main > h2{
+    margin-left: 35%;
+    padding: 15px;
+}
+
+.feed{
+    margin-left: 7%;
+}
+
+.feed h2{
+    margin: 10px;
+}
+
+
+.row, .side-bar{
+    border: 2px black solid;
+    height: fit-content;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+ .side-bar{
+    width: 180px;
+    text-align: center;
+ }
+
+.side-bar img{
+    width: 90%;
+}
+
+.head .likes{
+    width: 40%;
+    align-items: center;
+}
+
+.likes button{
+    height: 50%;
+    width: 40%;
+    background-color: orange;
+    box-shadow: 2px 2px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.j-between{
+    justify-content: space-between;
+}
