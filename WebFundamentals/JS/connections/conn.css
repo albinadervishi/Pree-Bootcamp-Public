@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar {
+    height: 70px;
+    padding: 10px; 
+    margin: auto;
+    color: white;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-left: 3.5%;
+}
+.navtitle{
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+.active {
+    margin: 15px;
+}
+
+.btn {
+    width: 100px;
+    height: 35px;
+    margin: 0px 15px;
+    border-radius: 1px ;
+    border-color: black;
+    color: white;
+    background-color: rgb(6, 138, 158);
+    box-shadow: 3px 3px black ;
+    margin-right:10% ;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+    margin: auto ;
+    justify-content: space-between;
+}
+
+.user-card {
+    margin-top: 5%;
+    width: 50%;
+    height: fit-content;
+    box-shadow: 0px 2px 2px 3px lightgray;
+}
+
+#cover {
+    margin: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: #17a2b8;
+}
+
+.profilepicture {
+    width: 100px;
+    height: 100px;
+    border: 4px solid lightgray;
+    border-radius: 100%;
+}
+
+.details {
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+}
+
+.logonamecontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+.logo {
+    height: 20px;
+    width: 15px;
+    margin-right: 2%;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.requests {
+    margin-top: 5%;
+    box-shadow: 0px 2px 2px 3px lightgray;
+    width: 30%;
+    height: fit-content;
+}
+
+.title {
+    width: max-content;
+    margin: 3%;
+}
+
+.navrequests {
+    background-color: #333333;
+    color: white;
+}
+
+.number1{
+    background-color: grey;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+}
+
+.photo{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 13px 0px;
+}
+
+.person {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.education {
+    width: 50%;
+    box-shadow: 0px 2px 2px 3px lightgray;
+    height: fit-content;
+    margin-top: 3%;
+
+
+}
+
+.education-title{
+    background-color: #333333;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 23px;
+}
+
+.maineducation{
+    padding: 5px 15px;
+}
+
+.maineducation  p:nth-child(2){
+    color: rgb(110, 109, 109);
+}
+
+.friends {
+    margin: 0;
+    box-shadow: 0px 2px 2px 3px lightgrey;
+    width: 24%;
+    height: fit-content;
+    position: absolute;
+    top: 60%;
+    left: 66%;
+}
+
+.number2 {
+    background-color: grey;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+}
+
+.viewmore {
+    border-top: 2px solid lightgray ;
+    padding: 10px;
+}
+
+.viewmore > a {
+    text-decoration-line: underline;
+    color:blue ;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.p-1 {
+    padding: 10px;
+}
+span {
+    display: block;
+}
+
+.justify-content{
+    justify-content: space-between;
+}
+.margin-updown{
+    margin: 10px ;
+}
+
+.margin-bottom{
+    margin-bottom: 7px;
+}
