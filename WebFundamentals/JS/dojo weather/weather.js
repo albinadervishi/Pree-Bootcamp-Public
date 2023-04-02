@@ -22,7 +22,7 @@ var result = [
 function changeGrads(...ids) {
     for (let i = 0; i < ids.length; i++) {
         let id = ids[i];
-    grads[id]+=32;
+    grads[id]= grads[id]*9/5+32;
     result[id].textContent = grads[id] + "°"
     }
 }
