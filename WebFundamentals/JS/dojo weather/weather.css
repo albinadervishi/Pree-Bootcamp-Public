@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 0 15%;
+}
+
+nav{
+    background-color: #9FC5F8;
+    color: white;
+    padding: 10px 20px;
+}
+
+.cities{
+    width: 30%;
+}
+
+.city-displayed{
+    padding: 20px;
+    border-bottom: 2px black solid ;
+    align-items: center;
+}
+
+.days{
+    padding: 30px;
+}
+
+.column {
+    margin-left: 25px;
+    padding: 20px;
+    width: 17%; 
+    flex-direction: column;
+    background-color: #EEEEEE;
+}
+
+.column img{
+    width: 90%;
+    border-radius: 50%;
+    margin:0 0 10px 10px;
+}
+
+.column h2, p{
+    margin: 0 0 10px 40px;
+}
+
+.grads h3:first-child{
+    color: red;
+}
+
+.grads h3:last-child{
+    color: blue;
+}
+
+.cookies{
+    width: 90%;
+    padding: 20px;
+    margin-left: 40px;
+    align-items: center;
+    border: 2px black solid;
+    background-color: #EEEEEE;
+}
+
+.cookies div{
+    margin: 0 25px 0 25px;
+}
+
+.cookies button{
+    width: 100px;
+    height: 30px;
+    background-color: #17A2B8;
+    box-shadow: 2px 2px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.j-between{
+    justify-content: space-between;
+}

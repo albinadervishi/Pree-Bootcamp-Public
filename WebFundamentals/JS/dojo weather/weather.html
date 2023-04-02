@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+    <!-- nav -->
+
+    <nav class="d-flex j-between">
+        <h1>DojoWeather </h1>
+        <div class="cities d-flex j-between">
+            <h3 onclick="alert('Weather in Burbank')">Burbank</h3>
+            <h3 onclick="alert('Weather in Chicago')">Chicago</h3>
+            <h3 onclick="alert('Weather in Dallas')">Dallas</h3>
+        </div>
+    </nav>
+
+    <!-- main -->
+
+    <main>
+
+        <div class="city-displayed d-flex j-between">
+            <h2>San Jose</h2>
+            <div class="d-flex">
+                <p>show temperature in</p>
+                <select onchange="changeGrads(0,1,2,3,4,5,6,7)" >
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- days displayed -->
+
+        <div class="days d-flex j-between">
+
+            <div class="column">
+                <h2>Today</h2>
+                <img src="assets/some_rain.png" alt="rain">
+                <p>some rain</p>
+                <div class="grads d-flex j-between">
+                    <h3 id="grad1">24°</h3>
+                    <h3 id="grad2">18°</h3>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2>Tomorrow</h2>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>some sun</p>
+                <div class="grads d-flex j-between">
+                    <h3 id="grad3">27°</h3>
+                    <h3 id="grad4">19°</h3>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2>Friday</h2>
+                <img src="assets/some_clouds.png" alt="clouds">
+                <p>some clouds</p>
+                <div class="grads d-flex j-between">
+                    <h3 id="grad5">21°</h3>
+                    <h3 id="grad6">16°</h3>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2>Saturday</h2>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>some sun</p>
+                <div class="grads d-flex j-between">
+                    <h3 id="grad7">26°</h3>
+                    <h3 id="grad8">21°</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- cookies alert -->
+
+        <div id="cookies" class="cookies d-flex j-between">
+            <img src="assets/cookie.png" alt="cookie">
+            <div>
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not edible ones) to personalize content and ads, to provide social media
+                    features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="acceptCookies()">I accept</button>
+        </div>
+
+    </main>
+</div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
