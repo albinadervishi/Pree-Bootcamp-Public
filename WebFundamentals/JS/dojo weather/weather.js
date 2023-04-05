@@ -17,8 +17,6 @@ var result = [
 ];
 
 
-
-
 function changeGrads(...ids) {
     for (let i = 0; i < ids.length; i++) {
         let id = ids[i];
