@@ -9,6 +9,7 @@ const Styler = () => {
 
 
   const handleInputChange = (event) => {
+    event.preventDefault();
     const { name, value } = event.target;
     if (name === 'color') {
       setColor(value);
@@ -19,7 +20,8 @@ const Styler = () => {
     }
   }
 
-    const handleButtonClick = () => {
+    const handleButtonClick = (e) => {
+      e.preventDefault();
       const colorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$|^rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)$|^(red|blue|green|yellow|orange|purple|black|white|gray)$/;
       if (colorRegex.test(color)) {
         const newBox = { backgroundColor: color, width: `${width}px`, height: `${height}px` };

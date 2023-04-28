@@ -43,3 +43,28 @@
     
 }
 
+
+/* import React from 'react';
+import './App.css';
+import Header from './components/Header';
+import Main from './components/Main';
+import Navbar from './components/Navbar';
+import Subcont from './components/Subcont';
+import Adv from './components/Adv';
+                
+function App() {
+  return (
+    <div className="app">
+        <Header />
+        <Navbar />
+        <Main>
+            <Subcont />
+            <Subcont />
+            <Subcont />
+            <Adv />
+        </Main>
+    </div>
+  );
+}
+                
+export default App; */
