@@ -7,7 +7,7 @@ const Tabs = (props) => {
   const handleTab1 = () => {
     setActiveTab("tab1");
   };
-  
+
   const handleTab2 = () => {
     setActiveTab("tab2");
   };
