@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+
 const SecondTab = () => {
 
   const [inputText, setInputText] = useState("");
@@ -26,7 +27,7 @@ const SecondTab = () => {
       <button className="addButton" onClick={handleAddClick}>Add</button>
       <p>You are in the Second Tab</p>
       {displayText.map((display, index) => (
-        <p key={index}>{display}<button onClick={() => handleRemove(index)}>Delete</button></p>
+        <p key={index}>{display}<button className="deleteButton" onClick={() => handleRemove(index)}>Delete</button></p>
       ))}
     </div>
   );

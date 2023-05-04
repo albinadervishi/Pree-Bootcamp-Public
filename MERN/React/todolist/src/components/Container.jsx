@@ -1,11 +1,22 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 
 const Container = () => {
     const [input, setInput] = useState("");
     const [todoList, setTodoList] = useState([]);
 
+    useEffect(() => {
+        const storedData = localStorage.getItem("todoList");
+        if (storedData) {
+          setTodoList(JSON.parse(storedData));
+        }
+      }, []);
+    
+      useEffect(() => {
+        localStorage.setItem("todoList", JSON.stringify(todoList));
+      }, [todoList]);
+
     const handleClick = () => {
-        const id = todoList.length;
+        const id = todoList.length + 1;
         setTodoList((prev) => [
           ...prev,
           {
@@ -57,7 +68,7 @@ const Container = () => {
                         }}>
         {todo.task}
         <input type="checkbox" onClick={() => handleComplete(todo.id)}></input>
-        <button onClick={() => handleDelete(todo.id)}>Delete</button>
+        <button className="deleteButton" onClick={() => handleDelete(todo.id)}>Delete</button>
       </li>
     );
   })}
