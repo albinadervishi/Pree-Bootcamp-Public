@@ -18,10 +18,11 @@ function App() {
                 headsCount++;
               if (headsCount === 5) {
                 resolve(`It took ${attempts} attempts to flip five heads`);
+              }else if (headsCount > 100) {
+                reject("You excedeed the limit");
               }
             } else {
               headsCount = 0;
-              reject("Oops! You flipped tails. Let's try again.");
             }
           }
           fiveHeadsSync
