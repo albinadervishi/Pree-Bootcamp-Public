@@ -7,6 +7,7 @@ const Style =()=>{
         color: color,
         backgroundColor: background
       };
+      
     return(
         <>
         {   

@@ -1,5 +1,4 @@
 import Home from './components/Home';
-import About from './components/About';
 import Style from './components/Style';
 import './App.css';
 import {
@@ -13,7 +12,7 @@ function App() {
     <div className="App">
        <BrowserRouter>
         <Routes>
-          <Route path="/:word" element={<About />} />
+          <Route path="/:word" element={<Style />} />
           <Route path="/:word/:color/:background" element={<Style />} />
           <Route exact path="/" element={<Home />} />
         </Routes>
