@@ -2,15 +2,14 @@ import axios from 'axios';
 import React, {useState} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Search  =({setResults})=>{
+const Search  =()=>{
     const [input, setInput] = useState("");
     const [selectPar, setSelectPar] = useState("people");
-    const {select, id} = useParams();
     const navigate = useNavigate();
 
 
 
-    const handleSearch = (value) => {
+    const handleSearch = () => {
         setInput("");
         navigate(`/${selectPar}/${input}`);
       };
