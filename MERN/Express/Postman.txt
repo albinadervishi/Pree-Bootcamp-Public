@@ -1,0 +1,168 @@
+// First 
+https://pokeapi.co/api/v2/pokemon/5
+
+ "abilities": [
+        {
+            "ability": {
+                "name": "blaze",
+                "url": "https://pokeapi.co/api/v2/ability/66/"
+            },
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "ability": {
+                "name": "solar-power",
+                "url": "https://pokeapi.co/api/v2/ability/94/"
+            },
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
+    "base_experience": 142,
+    "forms": [
+        {
+            "name": "charmeleon",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/5/"
+        }
+    ]...
+
+//Second
+
+https://pokeapi.co/api/v2/pokemon/wartortle
+
+{
+    "abilities": [
+        {
+            "ability": {
+                "name": "torrent",
+                "url": "https://pokeapi.co/api/v2/ability/67/"
+            },
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "ability": {
+                "name": "rain-dish",
+                "url": "https://pokeapi.co/api/v2/ability/44/"
+            },
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
+    "base_experience": 142,
+    "forms": [
+        {
+            "name": "wartortle",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/8/"
+        }
+    ]...
+
+//Third
+
+https://pokeapi.co/api/v2/pokemon/23
+
+{
+    "abilities": [
+        {
+            "ability": {
+                "name": "intimidate",
+                "url": "https://pokeapi.co/api/v2/ability/22/"
+            },
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "ability": {
+                "name": "shed-skin",
+                "url": "https://pokeapi.co/api/v2/ability/61/"
+            },
+            "is_hidden": false,
+            "slot": 2
+        },
+        {
+            "ability": {
+                "name": "unnerve",
+                "url": "https://pokeapi.co/api/v2/ability/127/"
+            },
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
+    "base_experience": 58,
+    "forms": [
+        {
+            "name": "ekans",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/23/"
+        }
+    ]
+
+//Forth
+
+https://pokeapi.co/api/v2/pokemon/clefairy
+
+{
+    "abilities": [
+        {
+            "ability": {
+                "name": "cute-charm",
+                "url": "https://pokeapi.co/api/v2/ability/56/"
+            },
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "ability": {
+                "name": "magic-guard",
+                "url": "https://pokeapi.co/api/v2/ability/98/"
+            },
+            "is_hidden": false,
+            "slot": 2
+        },
+        {
+            "ability": {
+                "name": "friend-guard",
+                "url": "https://pokeapi.co/api/v2/ability/132/"
+            },
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
+    "base_experience": 113,
+    "forms": [
+        {
+            "name": "clefairy",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/35/"
+        }
+    ]
+
+//Fifth
+
+https://pokeapi.co/api/v2/pokemon/27
+
+{
+    "abilities": [
+        {
+            "ability": {
+                "name": "sand-veil",
+                "url": "https://pokeapi.co/api/v2/ability/8/"
+            },
+            "is_hidden": false,
+            "slot": 1
+        },
+        {
+            "ability": {
+                "name": "sand-rush",
+                "url": "https://pokeapi.co/api/v2/ability/146/"
+            },
+            "is_hidden": true,
+            "slot": 3
+        }
+    ],
+    "base_experience": 60,
+    "forms": [
+        {
+            "name": "sandshrew",
+            "url": "https://pokeapi.co/api/v2/pokemon-form/27/"
+        }
+    ],

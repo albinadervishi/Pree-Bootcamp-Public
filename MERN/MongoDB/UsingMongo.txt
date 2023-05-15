@@ -1,0 +1,287 @@
+// get all students
+db.students.find().pretty()
+{
+        "_id" : ObjectId("64615ac637be287ade2aebf1"),
+        "name" : "Troy",
+        "home_state" : "Washington",
+        "lucky_number" : 3,
+        "birthday" : {
+                "month" : 2,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615d7d37be287ade2aebf2"),
+        "name" : "Maria",
+        "home_town" : "California",
+        "lucky_number" : 14,
+        "birthday" : {
+                "month" : 4,
+                "day" : 3,
+                "year" : 2000
+        }
+}
+{
+        "_id" : ObjectId("64615de337be287ade2aebf3"),
+        "name" : "Jacob",
+        "home_town" : "New York",
+        "lucky_number" : 8,
+        "birthday" : {
+                "month" : 11,
+                "day" : 18,
+                "year" : 2003
+        }
+}
+{
+        "_id" : ObjectId("64615e4037be287ade2aebf4"),
+        "name" : "Michelle",
+        "home_town" : "California",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 1,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615eb037be287ade2aebf5"),
+        "name" : "Brody",
+        "home_town" : "Chicago",
+        "lucky_number" : 6,
+        "birthday" : {
+                "month" : 6,
+                "day" : 6,
+                "year" : 2001
+        }
+}
+
+//Retrieve all students who are from California (San Jose Dojo) or Washington (Seattle Dojo).
+
+ db.students.find({home_town:"Washington", home_town:"California"}).pretty()
+{
+        "_id" : ObjectId("64615d7d37be287ade2aebf2"),
+        "name" : "Maria",
+        "home_town" : "California",
+        "lucky_number" : 14,
+        "birthday" : {
+                "month" : 4,
+                "day" : 3,
+                "year" : 2000
+        }
+}
+{
+        "_id" : ObjectId("64615e4037be287ade2aebf4"),
+        "name" : "Michelle",
+        "home_town" : "California",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 1,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+
+// Get all students whose lucky number is greater than 3
+
+ db.students.find({lucky_number:{$gt:3}}).pretty()
+{
+        "_id" : ObjectId("64615d7d37be287ade2aebf2"),
+        "name" : "Maria",
+        "home_town" : "California",
+        "lucky_number" : 14,
+        "birthday" : {
+                "month" : 4,
+                "day" : 3,
+                "year" : 2000
+        }
+}
+{
+        "_id" : ObjectId("64615de337be287ade2aebf3"),
+        "name" : "Jacob",
+        "home_town" : "New York",
+        "lucky_number" : 8,
+        "birthday" : {
+                "month" : 11,
+                "day" : 18,
+                "year" : 2003
+        }
+}
+{
+        "_id" : ObjectId("64615e4037be287ade2aebf4"),
+        "name" : "Michelle",
+        "home_town" : "California",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 1,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615eb037be287ade2aebf5"),
+        "name" : "Brody",
+        "home_town" : "Chicago",
+        "lucky_number" : 6,
+        "birthday" : {
+                "month" : 6,
+                "day" : 6,
+                "year" : 2001
+        }
+}
+
+// Get all students whose lucky number is less than or equal to 10
+
+ db.students.find({lucky_number: {$lte:10}}).pretty()
+{
+        "_id" : ObjectId("64615ac637be287ade2aebf1"),
+        "name" : "Troy",
+        "home_state" : "Washington",
+        "lucky_number" : 3,
+        "birthday" : {
+                "month" : 2,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615de337be287ade2aebf3"),
+        "name" : "Jacob",
+        "home_town" : "New York",
+        "lucky_number" : 8,
+        "birthday" : {
+                "month" : 11,
+                "day" : 18,
+                "year" : 2003
+        }
+}
+{
+        "_id" : ObjectId("64615e4037be287ade2aebf4"),
+        "name" : "Michelle",
+        "home_town" : "California",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 1,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615eb037be287ade2aebf5"),
+        "name" : "Brody",
+        "home_town" : "Chicago",
+        "lucky_number" : 6,
+        "birthday" : {
+                "month" : 6,
+                "day" : 6,
+                "year" : 2001
+        }
+}
+
+// Get all students whose lucky number is between 1 and 9 (inclusive)
+
+db.students.find({lucky_number: {$gt:1, $lt: 9}}).pretty()
+{
+        "_id" : ObjectId("64615ac637be287ade2aebf1"),
+        "name" : "Troy",
+        "home_state" : "Washington",
+        "lucky_number" : 3,
+        "birthday" : {
+                "month" : 2,
+                "day" : 23,
+                "year" : 2002
+        }
+}
+{
+        "_id" : ObjectId("64615de337be287ade2aebf3"),
+        "name" : "Jacob",
+        "home_town" : "New York",
+        "lucky_number" : 8,
+        "birthday" : {
+                "month" : 11,
+                "day" : 18,
+                "year" : 2003
+        }
+}
+{
+        "_id" : ObjectId("64615eb037be287ade2aebf5"),
+        "name" : "Brody",
+        "home_town" : "Chicago",
+        "lucky_number" : 6,
+        "birthday" : {
+                "month" : 6,
+                "day" : 6,
+                "year" : 2001
+        }
+}
+
+// Add a field named 'interests' to all student documents in the collection. The field should be an array and contain the following entries: 'coding', 'brunch', MongoDB'. Add this field to all documents using a single command.
+
+db.students.updateMany({}, {$set: {interests: ["coding", "brunch", "mongodb"]}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+
+// Add some unique interests for each particular student into each of their interest arrays.
+
+db.students.updateMany({}, {$set: {interests: ["coding", "brunch", "mongodb"]}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+> db.students.update({name:"Troy"}, {$push: {interests: "snowboarding"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({name:"Maria"}, {$push: {interests: "skiing"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({name:"Jacob"}, {$push: {interests: "stock market"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({name:"Michelle"}, {$push: {interests: "yoga"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({name:"Brody"}, {$push : {interests: "voley"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+// Add the interest 'taxes' into someone's interest array.
+
+db.students.update({name:"Michelle"}, {$push :{interests: "taxes"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+//Remove the 'taxes' interest you just added.
+
+ db.students.update({name:"Michelle"}, {$pop: {interests: (1)}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+// Remove all students who are from California.
+
+db.students.deleteMany({home_town: "California"})
+{ "acknowledged" : true, "deletedCount" : 2 }
+
+// Remove a student by name.
+
+db.students.remove({name:"Brody"})
+WriteResult({ "nRemoved" : 1 })
+
+// Remove a student whose lucky number is greater than 5 (JUST ONE)
+
+ db.students.deleteOne({lucky_number: {$gt : 5}})
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+// Add a field to each student document called 'number_of_belts' and set it to 0.
+
+db.students.updateMany({}, {$set: {number_of_belts: 0}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+// Increment this field by 1 for all students in Washington (Seattle Dojo).
+
+db.students.update({home_town:"Washington"}, {$inc: {number_of_belts: 1}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+// Rename the 'number_of_belts' field to 'belts_earned'
+
+ db.students.updateMany({}, {$rename : {"number_of_belts": "belts_earned"}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+// Remove the 'lucky_number' field.
+
+db.students.updateMany({}, {$unset: {lucky_number: ""}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+// Add a 'updated_on' field, and set the value as the current date
+
+db.students.updateMany({}, {$currentDate: {updated_on: true}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
