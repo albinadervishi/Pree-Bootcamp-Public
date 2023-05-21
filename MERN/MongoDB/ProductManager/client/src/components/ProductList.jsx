@@ -15,10 +15,10 @@ const ProductList = (props) => {
     	})
     }, [])
 
-    const deleteProduct = (personId) => {
-        axios.delete('http://localhost:8000/api/product/' + product._id)
+    const deleteProduct = (productId) => {
+        axios.delete('http://localhost:8000/api/product/' + productId)
             .then(res => {
-                removeFromDom(id)
+                removeFromDom(productId)
             })
             .catch(err => console.log(err))
     }
