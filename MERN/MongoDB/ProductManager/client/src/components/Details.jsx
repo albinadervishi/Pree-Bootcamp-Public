@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import {useParams, useNavigate} from "react-router-dom";
 
-const Detail = (props) => {
+const Details = (props) => {
     const [product, setProduct] = useState({})
     const {id} = useParams(); 
     const navigate = useNavigate();
@@ -38,4 +38,4 @@ const Detail = (props) => {
         </div>
     );
 }
-export default Detail;
+export default Details;

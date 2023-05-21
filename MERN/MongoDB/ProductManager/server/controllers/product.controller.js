@@ -1,11 +1,5 @@
 const Product = require('../model/product.model');
 
-// module.exports.index = (request, response) => {  
-//     response.json({   
-//        message: "Hello World"
-//     });
-// }
-
 module.exports.findAllProducts = (req, res) => {
     Product.find() 
          .then((allProducts) =>{
