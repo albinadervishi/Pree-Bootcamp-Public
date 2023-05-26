@@ -4,15 +4,20 @@ import axios from 'axios';
 
 const AuthorList = (props) => {
     const {setAuthor, author ,update} = props;
-    
+
     useEffect(()=>{
+        
     	axios.get("http://localhost:8000/api/authors")
     	.then((res)=>{
-            setAuthor(res.data.authors);
-	})
+            const sortedData = res.data.authors.sort((a, b) =>
+          a.firstName.localeCompare(b.firstName)
+        );
+        setAuthor(sortedData);
+      })
     	.catch((err)=>{
             console.log(err);
     	})
+
     }, [update])
 
     const deleteAuthor = (authorId) => {
