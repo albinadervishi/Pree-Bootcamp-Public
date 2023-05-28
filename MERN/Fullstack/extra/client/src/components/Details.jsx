@@ -18,7 +18,7 @@ const Details = (props) => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  const toggleCheckbox = (property) => {
+  const onCheck = (property) => {
     const updatedValue = !user[property];
     const payload = {
       [property]: updatedValue,
@@ -60,7 +60,7 @@ const Details = (props) => {
           id="belt"
           type="checkbox"
           checked={user.belt}
-          onChange={() => toggleCheckbox('belt')}
+          onChange={() => onCheck('belt')}
         />
       </p>
       <p>
@@ -70,7 +70,7 @@ const Details = (props) => {
           id="degree"
           type="checkbox"
           checked={user.degree}
-          onChange={() => toggleCheckbox('degree')}
+          onChange={() => onCheck('degree')}
         />
       </p>
       <button onClick={goToEdit}>Go to Edit Page</button>

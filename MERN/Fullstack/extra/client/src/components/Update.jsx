@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Update= (props) => {
     const [update,setUpdate]=useState(true)
-    const [errors,setErrors] = useState([])
+    const [errors,setErrors] = useState({})
     const [firstName, setFirstName] = useState("");
     const [email, setEmail] = useState("");
     const [imgURL, setImgURL] = useState("");
@@ -31,10 +31,13 @@ const Update= (props) => {
     
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        if(firstName.length <= 3){
-            setErrors('Name should be more than 3');
+        console.log(errors);
+        if (firstName.length <= 3) {
+            setErrors({ firstName: { message: 'Name should be more than 3' } });
             return;
-        }
+          }
+      
+
         axios.patch('http://localhost:8000/api/users/edit/' + id, {
             firstName,
             email,    
@@ -44,19 +47,15 @@ const Update= (props) => {
             degree      
         })
             .then(res=>{
-                console.log(res.data.errors);
-                if (res.data.errors) {
-                    setErrors(res.data.errors);
-                }
-                else{
-                setUpdate(!update);
-                console.log("sapo nisa nje request tek server")
+                if(res.data.errors) {
+                    console.log(errors);
+                    setErrors(res.data.errors)
+                }else{
+                
                 navigate("/");
                 }
         })
-        .catch(err=>{
-            console.log("erorrTEst:"+ JSON.stringify(err))
-        })
+        .catch(err=>{ setErrors(err.response.data.errors ) })
     }
 
     return (
@@ -69,6 +68,7 @@ const Update= (props) => {
                 <label>Firstname:</label>
                 <input type="text" class="form-control" value={firstName} onChange = {(e)=>setFirstName(e.target.value)}/>
                 {errors.firstName ?  <p className='text-danger'>{errors.firstName.message }</p>  : ""}
+               
                 </div>
                 <div class="form-group">
                 <label >Email</label>

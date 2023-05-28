@@ -55,18 +55,21 @@ module.exports.updateUser = (request, response) => {
   
     User.findById(id)
       .then(user => {
-        if (firstName !== user.firstName) {
-          User.exists({ firstName: firstName })
-            .then(userExists => {
-              if (userExists) {
-                return response.json("This user already exists");
-              }
+        User.exists({ firstName: firstName })
+          .then(userExists => {
+            if (userExists && firstName !== user.firstName) {
+              return Promise.reject({ errors: { firstName: { message: 'This firstname is already taken' } } });
+            }
+            return User.exists({ role: 'Teacher', _id: { $ne: id } });
+          })
+          .then(teacherExists => {
+            if (teacherExists && role === 'Teacher') {
+              return Promise.reject({ errors: { role: { message: 'A user with the role Teacher already exists' } } });
+            } else {
               updateUser(user);
-            })
-            .catch(err => response.status(500).json(err));
-        } else {
-          updateUser(user);
-        }
+            }
+          })
+          .catch(err => response.status(500).json(err));
       })
       .catch(err => response.status(500).json(err));
   
@@ -83,6 +86,8 @@ module.exports.updateUser = (request, response) => {
         .catch(err => response.status(500).json(err));
     }
   };
+  
+
 
 // module.exports.updateUser = (request, response) => {
 //     const { id } = request.params;
