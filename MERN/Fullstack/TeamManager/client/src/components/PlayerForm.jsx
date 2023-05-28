@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 const PlayerForm = (props) => {
-    const {setPlayer, player ,setUpdate,update} = props;
+    const {socket, setPlayer, player ,setUpdate,update} = props;
     const [errors, setErrors] = useState([])
     const [firstName, setFirstName] = useState ("");
     const [isFirstNameValid, setIsFirstNameValid] = useState(false);
@@ -43,6 +43,7 @@ const PlayerForm = (props) => {
                 else{
                 setUpdate(!update);
                 navigate("/");
+                socket.emit("toServer", res.data)
             }
             })
             .catch(err=>{

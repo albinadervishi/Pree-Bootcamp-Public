@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 const PlayerList = (props) => {
-    const {setPlayer, player ,update} = props;
+    const {socket, setPlayer, player ,update, setUpdate} = props;
 
     useEffect(()=>{
     	axios.get("http://localhost:8000/api/players")
@@ -16,20 +16,26 @@ const PlayerList = (props) => {
     	.catch((err)=>{
             console.log(err);
     	})
-
+      socket.on('toClient', (person)=>{
+        console.log("yes")
+        setPlayer([...player, person]);
+        setUpdate(!update)
+      })
+      return () => socket.removeAllListeners;
     }, [update])
 
     const deletePlayer = (playerId) => {
         axios.delete('http://localhost:8000/api/players/' + playerId)
             .then(res => {
                 setPlayer(player.filter(player => player._id != playerId)); 
+                socket.emit("toServer", res.data);
             })
             .catch(err => console.log(err))
     }
 
     return (
         <div>
-            <Link className="h3" to={'/players'}>List</Link>&nbsp; &nbsp;|&nbsp; &nbsp;
+            <Link className="h3" to={'/'}>List</Link>&nbsp; &nbsp;|&nbsp; &nbsp;
             <Link className="h3" to={'/players/new'}>Add Player</Link>
           <table class="table">
             <thead>

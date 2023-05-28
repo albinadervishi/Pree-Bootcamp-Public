@@ -20,8 +20,10 @@ const Game = (props) => {
     
     const ChangeStatus = (e) => {
         const id = e.target.id
+        console.log(player[`${game}`])
         const status = e.target.value
         axios.patch(`http://localhost:8000/api/players/${id}/${game}`, {
+
             status: status
         }).then(e=>setUpdate(!update))
         
