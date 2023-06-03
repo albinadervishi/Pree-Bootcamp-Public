@@ -1,7 +1,7 @@
 class BankAccount {
-    constructor(intRate, accountBalance) { 
-        this.accountBalance = 0
-        this.intRate = 0.02
+    constructor(intRate = 0.08, balance = 0) { 
+        this.accountBalance = balance;
+        this.intRate = intRate;
     }
     deposit(amount) {
     this.accountBalance += amount;  
@@ -21,7 +21,27 @@ class BankAccount {
     }
 }
 
-const albina=new BankAccount("Albina");
-const test1=new BankAccount("Test1");
-albina.deposit(100).deposit(50).deposit(200).withdraw(50).yieldInterest().displayAccountInfo()
-test1.deposit(200).deposit(200).withdraw(50).withdraw(30).withdraw(20).withdraw(50).yieldInterest().displayAccountInfo()
+class User {
+    constructor(name, email) {     
+        this.name = name;
+        this.email = email;
+        this.account = new BankAccount();
+    }
+    makeDeposit(amount) {                
+        this.account.deposit(amount);  
+        return this;
+    }
+    makeWithdrawal(amount) {               
+        this.account.withdraw(amount);   
+        return this;
+    }
+    displayBalance(){
+        console.log("User:", this.name ,"Balance:", this.account.accountBalance, "int Rate:", this.account.intRate);
+        return this;
+    }
+}
+
+const crow = new User("Crow T. Robot", "hamdingers@gizmonic.com");
+const tom = new User("Tom Servo", "tommonster@gizmonic.com");
+
+tom.makeDeposit(200).makeDeposit(100).makeDeposit(200).makeWithdrawal(100).displayBalance();
